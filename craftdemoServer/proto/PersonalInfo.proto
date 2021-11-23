@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.assessment.craftdemo";
+
+
+service PersonalInformationService {
+	rpc SetInfo (PersonalInfoRequest) returns (PersonalInfoReply) {}
+}
+
+message PersonalInfoRequest {
+	string firstName = 1;
+	string lastName = 2;
+	string dateOfBirth = 3;
+	string email = 4;
+	string phoneNumber = 5;
+	int64 timestamp = 6;
+}
+
+message PersonalInfoReply {
+	string message = 1;
+}
+
+
